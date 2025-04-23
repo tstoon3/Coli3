@@ -4,9 +4,9 @@
 <template>
 
 
-  <nav class="flex justify-between bg-gray-100 border-none h-15">
-    <img alt="Colimited logo" class="logo" src="@/assets/Colimited.svg" width="175" height="175" />
-    <div class="max-w-screen-xl text-xl font-bold max-w-screen-xl mx-auto">
+  <nav class="flex justify-between bg-gray-100 border-none h-18">
+    <img alt="Colimited logo" class="logo" src="@/assets/Colimited.svg" width="175" height="100" />
+    <div class="max-w-screen-xl text-xl font-bold max-w-screen-xl mx-auto content-center">
         <!--<button data-collapse-toggle="navbar-default" type="button"
           class="p-2 w-10 h-10 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
           aria-controls="navbar-default" aria-expanded="false">
