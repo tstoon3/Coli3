@@ -1,18 +1,45 @@
 <script setup>
+import { ref } from 'vue';
 
+const branches = ['Siam Paragon', 'Emsphere', 'Central World', 'Langsuan']
+
+// ค่าที่ถูกเลือก
+const selectedBranch = ref('')
 </script>
 <template>
-<div class="flex flex-col items-center">
-  <!-- แถวบน: รูป 3 ใบ -->
-  <div class="grid grid-cols-3 w-full">
-    <img src="@/Img/WelcomeSPG.jpg" class="w-full h-70 object-cover blur-xs" />
-    <img src="@/Img/WelcomeEMS.jpg" class="w-full h-70 object-cover blur-xs" />
-    <img src="@/Img/WelcomeCTW.jpg" class="w-full h-70 object-cover blur-xs" />
-  </div>
+  <div class="flex flex-col items-center">
+    <!-- แถวบน: รูป 3 ใบ -->
+     
+    <div class="grid grid-cols-3 w-full">
+      
+      <img src="@/Img/WelcomeSPG.jpg" class="w-full h-70 object-cover blur-xs" />
+      <img src="@/Img/WelcomeEMS.jpg" class="w-full h-70 object-cover blur-xs" />
+      <img src="@/Img/WelcomeCTW.jpg" class="w-full h-70 object-cover blur-xs" />
+      
+    </div>
+    <div class="absolute h-full w-full p-24">
+        <div class="bg-white rounded-lg shadow-md overflow-hidden w-75 p-4">
+            Location branch
+            <div class="w-full max-w-sm mx-auto p-4 ">
+            <label for="branch" class="block mb-2 text-sm font-medium text-gray-700">เลือกสาขา</label>
+            <select id="branch" v-model="selectedBranch"
+              class="block w-full px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+              <option value="" disabled selected>-- กรุณาเลือกสาขา --</option>
+              <option v-for="(branch, index) in branches" :key="index" :value="branch">
+                {{ branch }}
+              </option>
+            </select>
 
-  <!-- แถวล่าง: 1 รูปกลาง -->
-  <img src="@/Img/WelcomeRS.jpg" class="w-full h-70 object-cover mt-100 blur-xs" />
-</div>
+            <p class="mt-4 text-sm text-gray-600">
+              สาขาที่คุณเลือกคือ: <span class="font-semibold text-blue-600">{{ selectedBranch }}</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+    <!-- แถวล่าง: 1 รูปกลาง -->
+    <img src="@/Img/WelcomeRS.jpg" class="w-full h-70 object-cover mt-100 blur-xs" />
+  </div>
 
 
 </template>
