@@ -3,8 +3,8 @@ import CoNavVue from "./components/CoNav.vue"
 import PromotionCo from "./components/PromotionCo.vue";
 import WelcomePagevue from "./components/WelcomePage.vue"
 import FooterCo from "./components/FooterCo.vue";
-
 import LocationCo from "./components/LocationCo.vue";
+import TestMapCo from "./components/TestMapCo.vue";
 
 </script>
 
@@ -18,6 +18,8 @@ import LocationCo from "./components/LocationCo.vue";
       <WelcomePagevue />
       <PromotionCo />
       <LocationCo />
+      <TestMapCo />
+
     </main>
     <footer>
       <FooterCo />
