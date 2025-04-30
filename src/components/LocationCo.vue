@@ -3,10 +3,30 @@ import { ref, onMounted, watch } from 'vue';
 //import axios from 'axios';
 //const provinces = ref([])
 
-const branches = [{ name: 'สาขา Siam Paragon', location: { lat: 13.746565555527647, lng: 100.53529154495494 },details : 'ชั้น G Floor Gourmet Garden Zone, Siam Paragon, 241 ถ. พระรามที่ 1 แขวงปทุมวัน เขตปทุมวัน กรุงเทพมหานคร 10330' },
-{ name: 'สาขา Emsphere', location: { lat: 13.732617023212537, lng: 100.56632392378717 },details : '628 ห้อง ชั้น GM05 ถ. สุขุมวิท แขวงคลองตัน เขตคลองเตย กรุงเทพมหานคร 10110'},
-{ name: 'สาขา Central World', location: { lat: 13.747558562073433, lng: 100.53984501332049 },details : 'ชั้น 7 Floor Central World 999/9 ถ. พระรามที่ 1 แขวงปทุมวัน เขตปทุมวัน กรุงเทพมหานคร 10330'},
-{ name: 'สาขา Langsuan', location: { lat: 13.737191203885132, lng: 100.54292951230548 },details : 'Velaa Sindhorn Village 87 Langsuan rd, ซอย, ถ. หลังสวน แขวงลุมพินี กรุงเทพมหานคร 10330'}]
+const branches = [{
+  name: 'สาขา Siam Paragon',
+  location: { lat: 13.7462842, lng: 100.5327381 },
+  details: 'ชั้น G Floor Gourmet Garden Zone, Siam Paragon, 241 ถ. พระรามที่ 1 แขวงปทุมวัน เขตปทุมวัน กรุงเทพมหานคร 10330',
+  phone: '021257517'
+},
+{
+  name: 'สาขา Emsphere',
+  location: { lat: 13.7323274, lng: 100.564128 },
+  details: '628 ห้อง ชั้น GM05 ถ. สุขุมวิท แขวงคลองตัน เขตคลองเตย กรุงเทพมหานคร 10110',
+  phone: '0953725599'
+},
+{
+  name: 'สาขา Central World',
+  location: { lat: 13.747558562073433, lng: 100.53984501332049 },
+  details: 'ชั้น 7 Floor Central World 999/9 ถ. พระรามที่ 1 แขวงปทุมวัน เขตปทุมวัน กรุงเทพมหานคร 10330',
+  phone: '022528966'
+},
+{
+  name: 'สาขา Langsuan',
+  location: { lat: 13.737191203885132, lng: 100.54292951230548 },
+  details: 'Velaa Sindhorn Village 87 Langsuan rd, ซอย, ถ. หลังสวน แขวงลุมพินี กรุงเทพมหานคร 10330',
+  phone: ' 022552799'
+}]
 
 
 const selectedBranch = ref(branches[0])
@@ -86,17 +106,13 @@ watch(() => selectedBranch.value, () => {
             <p class="mt-4 text-sm text-gray-600 pt-2">
               สาขาที่คุณเลือกคือ: <span class="font-semibold text-blue-600">{{ selectedBranch.name }}</span>
             </p>
-            <div class="text-sm pt-6">{{ selectedBranch.details }}</div>
-
+            <div class="text-sm pt-6 h-auto">{{ selectedBranch.details }}</div>
+            <a :href="`tel:${selectedBranch.phone}`" class="text-sm underline">เบอร์โทร: {{ selectedBranch.phone }}</a>
           </div>
-
           <div id="map" class="w-full h-[300px]"></div>
-
         </div>
-
       </div>
     </div>
-
   </div>
 
 
