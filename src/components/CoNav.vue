@@ -1,5 +1,7 @@
 <script setup>
+import { ref } from 'vue'
 
+const isOpen = ref(false)
 </script>
 <template>
 
@@ -7,36 +9,42 @@
   <nav class="flex justify-between bg-gray-100 border-none h-18">
     <img alt="Colimited logo" class="logo" src="@/assets/Colimited.svg" width="175" height="100" />
     <div class="max-w-screen-xl text-xl font-bold max-w-screen-xl mx-auto content-center">
-        <!--<button data-collapse-toggle="navbar-default" type="button"
-          class="p-2 w-10 h-10 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-          aria-controls="navbar-default" aria-expanded="false">
-          <span class="sr-only">Open main menu</span>
-          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M1 1h15M1 7h15M1 13h15" />
-          </svg>
-        </button>-->
-        
-        <div class="hidden md:block md:w-auto" id="navbar-default">
-          <ul class="flex items-center h-15 text-lg text-base">
-            <li class="px-6 hover:text-gray-600">
-              <a href="#" aria-current="page">หน้าแรก</a>
-            </li>
-            <li class="px-6 hover:text-gray-600">
-              <a target="_blank" href="https://online.fliphtml5.com/yuhij/gfdh/#p=1">เมนูอาหาร</a>
-            </li>
-            <li class="px-6 hover:text-gray-600">
-              <a href="#">ข่าวสาร&โปรโมชั่น</a>
-            </li>
-            <li class="px-6 hover:text-gray-600 ">
-              <a href="#">จองโต๊ะ</a>
-            </li>
-            <li class="px-6 hover:text-gray-600">
-              <a href="#">ติดต่อเรา</a>
-            </li>
-          </ul>
-        </div>
+      <button @click="isOpen = !isOpen" class="md:hidden text-gray-600 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      <div class="hidden md:block md:w-auto" id="navbar-default">
+        <ul class="flex items-center h-15 text-lg text-base">
+          <li class="px-6 hover:text-gray-600">
+            <a href="#" aria-current="page">หน้าแรก</a>
+          </li>
+          <li class="px-6 hover:text-gray-600">
+            <a target="_blank" href="https://online.fliphtml5.com/yuhij/gfdh/#p=1">เมนูอาหาร</a>
+          </li>
+          <li class="px-6 hover:text-gray-600">
+            <a href="#">ข่าวสาร&โปรโมชั่น</a>
+          </li>
+          <li class="px-6 hover:text-gray-600 ">
+            <a href="#">จองโต๊ะ</a>
+          </li>
+          <li class="px-6 hover:text-gray-600">
+            <a href="#">ติดต่อเรา</a>
+          </li>
+          <li class="px-4 hover:text-gray-600 ">
+            <a href="https://www.facebook.com/colimited.restaurant?locale=th_TH">
+              <img src="@/Icons/facebook.svg" alt="">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/colimited.restaurant/">
+              <img src="@/Icons/instagram.svg" alt="" class="w-7 h-7">
+            </a>
+          </li>
+        </ul>
       </div>
+    </div>
   </nav>
 
 </template>
