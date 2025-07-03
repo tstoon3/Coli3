@@ -32,12 +32,12 @@ const isOpen = ref(false)
           <li class="px-6 hover:text-gray-600">
             <a href="#">ติดต่อเรา</a>
           </li>
-          <li class="px-4 hover:text-gray-600 ">
+          <li class="px-2 hover:text-gray-600 ">
             <a href="https://www.facebook.com/colimited.restaurant?locale=th_TH">
               <img src="@/Icons/facebook.svg" alt="">
             </a>
           </li>
-          <li>
+          <li class="px-4 hover:text-gray-600">
             <a href="https://www.instagram.com/colimited.restaurant/">
               <img src="@/Icons/instagram.svg" alt="" class="w-7 h-7">
             </a>

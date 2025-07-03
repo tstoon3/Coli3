@@ -4,6 +4,7 @@ import PromotionCo from "./components/PromotionCo.vue";
 import WelcomePagevue from "./components/WelcomePage.vue"
 import FooterCo from "./components/FooterCo.vue";
 import LocationCo from "./components/LocationCo.vue";
+import NewWelcomepage from "./components/NewWelcomepage.vue";
 //import TestMapCo from "./components/TestMapCo.vue";
 
 </script>
@@ -15,11 +16,10 @@ import LocationCo from "./components/LocationCo.vue";
     </div>
 
     <main>
+      <NewWelcomepage />
       <WelcomePagevue />
       <PromotionCo />
       <LocationCo />
-      
-
     </main>
     <footer>
       <FooterCo />
